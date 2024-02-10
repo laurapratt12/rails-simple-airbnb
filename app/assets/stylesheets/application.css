@@ -13,3 +13,141 @@
  *= require_tree .
  *= require_self
  */
+.navbar {
+  background-color: #faf7f7;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  }
+
+.navbar a {
+color: #000000;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+.navbar-actions {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.container-show {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card {
+  max-width: 440px;
+  max-height: 438px;
+}
+
+.row .card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row .flat-card-details {
+margin-bottom: 10px;
+}
+
+.row .flat-card-actions {
+    background-color: inherit;
+    position: relative;
+    border-top: 1px solid rgba(160,160,160,0.2);
+}
+
+#title-page {
+  font-size: 30px;
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#photo-banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    flex: 1;
+    min-width: 200px; /* Adjust as needed */
+  }
+
+#title-page {
+  font-size: 30px;
+  float: left;
+  display: block;
+  text-align: center;
+}
+
+#search-form {
+  position: relative;
+  left: 65px;
+  grid-column-start: 3;
+}
+
+#add {
+  position: relative;
+  left: 85px;
+  top: 5px;
+  font-size: 18px;
+  margin-left: 5%;
+  grid-column-start: 4;
+}
+
+
+
+  /* // Smallest device */
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,60 @@
+<div class="navbar">
+  <div id="title-page"> <%= link_to "Simple Airbnb", flats_path %> </div>
+  <div class="navbar-actions">
+    <form id="search-form" class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button type="button" class="btn btn-outline-success">
+        <%="Search" %>
+      </button>
+    </form>
+    <div id="add">
+      <%= link_to new_flat_path, class:"btn btn-primary" do %>
+        <i class="fa-solid fa-plus"></i> Add flat
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="container mt-3">
+  <div class="container">
+    <div class="row">
+    <h1><%= "All our flats" %></h1>
+    </div>
+    <div class="row card-container">
+      <% @flats.each do |flat| %>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="<%= "https://tse3.mm.bing.net/th?id=OIP.3fcjoFSxmoMTSIQRvP--QgHaE8&pid=Api&P=0&h=180"  %>" class="card-img-top" alt="<%= flat.name %>">
+              <div class="card-body">
+                <h5 class="card-title"><%= flat.name %></h5>
+                <p class="card-text"><%= flat.address %></p>
+                <div class="row flat-card-details">
+                  <div class="col-auto">
+                    <p class="card-text mb-0"> <i class="fa-solid fa-user-group"></i><span><%= flat.number_of_guests %></span></p>
+                  </div>
+                  <div class="col-auto">
+                    <p class="card-text mb-0"> <i class="fa-solid fa-euro-sign"></i><span><%= flat.price_per_night %></span></p>
+                  </div>
+                </div>
+                <div class="row flat-card-actions">
+                  <div class="col-auto">
+                    <p class="card-text mt-4"><a href="<%= flat_path(flat) %>">More info</a></p>
+                  </div>
+                  <div class="col-auto">
+                    <p class="card-text mt-4"><a href="<%= edit_flat_path(flat) %>">Edit</a></p>
+                  </div>
+                  <div class="col-auto">
+                    <p class="card-text mt-4">
+                      <%= link_to "Delete", flat_path(flat),
+                      method: :delete,
+                      data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                      class: "mt-4" %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
