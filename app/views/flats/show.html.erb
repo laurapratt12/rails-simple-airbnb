@@ -1,23 +1,40 @@
 <div class="container-show">
   <img src="https://c.pxhere.com/photos/94/5f/london_night_lights_thames_river_panorama_landscape_buildings_urban-620212.jpg!d" id="photo-banner">
-    <div class="container-info-show">
+  <div class="container-info-show">
       <div class="info-flat-show">
-
         <div class="flat-name">
-        <h1> <%= @flat.name %></h1>
+          <h1> <%= @flat.name %></h1>
+          <p> <%= @flat.address %></p>
         </div>
-
         <div class="flat-description">
-        <h1> <%= @flat.description %></h1>
+          <h2> A bit more about this flat...</h2>
+          <p><%= @flat.description %></p>
         </div>
-
-        <div class="flat-details">
-        <h1> <%= @flat.name %></h1>
+        <div class="row flat-card-details">
+          <div class="col-auto">
+            <p class="card-text mb-0"> <i class="fa-solid fa-user-group"></i><span><%= @flat.number_of_guests %></span></p>
+          </div>
+          <div class="col-auto">
+            <p class="card-text mb-0"> <i class="fa-solid fa-euro-sign"></i><span><%= @flat.price_per_night %></span></p>
+          </div>
         </div>
-
       </div>
       <div class="info-booking-show">
+        <div class= "booking-form">
+          <h3>Book this place</h3>
+          <form action="#" method="post">
+            <label for="from-date">From:</label>
+            <input type="date" class= "form-control" id="from-date" name="from-date" required><br>
+            <label for="to-date">To:</label>
+            <input type="date" class= "form-control" id="to-date" name="to-date" required><br>
+            <button type="submit" class="btn btn-primary btn-block">Book</button>
+          </form>
+        </div>
+          <div class="flat-details">
+            <h1> <%= %></h1>
+          </div>
       </div>
     </div>
+     <%= link_to 'Back', flats_path, class: 'btn btn-outline-dark mb-3' %>
   </div>
 </div>

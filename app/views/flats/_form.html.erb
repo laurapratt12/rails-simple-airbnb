@@ -1,4 +1,4 @@
-<h1>New Flat</h1>
+<div class="form-container">
 
 <%= form_with(model: @flat, local: true) do |form| %>
   <div class="form-group">
@@ -27,6 +27,9 @@
   </div>
 
   <div class="actions">
-    <%= form.submit 'Submit', class: 'btn btn-primary' %>
+    <%= form.submit 'Submit', class: 'btn btn-primary mt-3' %>
   </div>
+
+  <%= link_to 'Back', flats_path, class: 'btn btn-light mt-3 text-decoration-none' %>
 <% end %>
+</div>

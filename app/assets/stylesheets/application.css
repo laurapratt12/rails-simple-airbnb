@@ -18,12 +18,12 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  }
+}
 
 .navbar a {
-color: #000000;
-padding: 14px 16px;
-text-decoration: none;
+  color: #000000;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .navbar-actions {
@@ -46,15 +46,50 @@ text-decoration: none;
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.card {
-  max-width: 440px;
-  max-height: 438px;
+.form-container {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 20px;
 }
+
+.container-info-show {
+display: flex;
+justify-content: space-between;
+}
+
+.info-flat-show {
+  position: relative;
+  top: -100px;
+  left: 60px;
+  width: 600px;
+  padding: 10px;
+  width: 750px;
+}
+
+.info-booking-show {
+  position: relative;
+  top: -75px;
+  right: 100px;
+  background-color: #F8F9FA;
+  border-radius: 5px;
+  padding: 15px;
+  max-height: 300px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.flat-name, .flat-description, .flat-card-details {
+  background-color:#F8F9FA ;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
 
 .row .card-container {
   display: flex;
@@ -62,13 +97,13 @@ text-decoration: none;
 }
 
 .row .flat-card-details {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .row .flat-card-actions {
-    background-color: inherit;
-    position: relative;
-    border-top: 1px solid rgba(160,160,160,0.2);
+  background-color: inherit;
+  position: relative;
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
 }
 
 #title-page {
@@ -82,22 +117,16 @@ margin-bottom: 10px;
 }
 
 #photo-banner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: 0.5rem 0 1rem 0;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-    flex: 1;
-    min-width: 200px; /* Adjust as needed */
-  }
-
-#title-page {
-  font-size: 30px;
-  float: left;
-  display: block;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  min-width: 200px; /* Adjust as needed */
 }
 
 #search-form {
@@ -106,18 +135,36 @@ margin-bottom: 10px;
   grid-column-start: 3;
 }
 
-#add {
-  position: relative;
-  left: 85px;
-  top: 5px;
-  font-size: 18px;
-  margin-left: 5%;
+#add-button {
+  color: rgb(21, 21, 23);
+  font-size: 15px;
+  font-weight: 500;
+  color: blue;
   grid-column-start: 4;
+  margin-right: 20%;
+  margin-left: 25%;
+  padding: 10px 15px;
 }
 
+#add-button:hover {
+  color: white;
+}
 
+#more-info-link a,
+#edit-link a,
+#delete-link a {
+  text-decoration: none;
+}
 
-  /* // Smallest device */
+#edit-link a {
+  color: rgb(231, 231, 48);
+}
+
+#delete-link a {
+  color: red;
+}
+
+/* // Smallest device */
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
     grid-template-columns: 1fr;
