@@ -1,12 +1,6 @@
 <div class="navbar">
   <div id="title-page"> <%= link_to "Simple Airbnb", flats_path %> </div>
   <div class="navbar-actions">
-    <form id="search-form" class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button type="button" class="btn btn-outline-success">
-        <%="Search" %>
-      </button>
-    </form>
       <%= link_to new_flat_path, id: "add-button", class:"btn btn-outline-primary" do %>
         <%="Add flat"%>
       <% end %>
